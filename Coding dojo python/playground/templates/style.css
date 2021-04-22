@@ -1,0 +1,21 @@
+#contaner{
+    border: red solid 1px;
+    height:400px;
+    width: 1000px;
+    display: flex;
+    display: inline-block;
+}
+#header{
+    color: red;
+    font-size: x-large;
+}
+#boxes{
+    background-color: aqua;
+    height: 300px;
+    width: 100px;
+}
+.box{
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+}

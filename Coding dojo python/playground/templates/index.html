@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayGround</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header" style="text-align: center; padding-left: 500px;" >
+            <h2 style="text-align: center; height: fit-content; width: fit-content;">Welcome!</h2>
+            
+        </div>
+        <div id="boxes" style="height: 300px; width: 1000px; display: flex; justify-content: space-between; flex-wrap: wrap; padding-left: 50px; padding-right: 50px;">
+        {% for x in range(0, times): %}
+            <div class="box" style="background-color:{{color}}; height: 200px; width: 200px; border: solid black 2px; margin-top: 50px;" >
+            </div>
+        {% endfor %}    
+            </div>
+        </div>
+    </div>
+</body>
+</html>

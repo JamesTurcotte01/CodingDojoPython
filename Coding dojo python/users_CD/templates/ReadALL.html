@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Read (ALL)</title>
+</head>
+<body>
+    <h1 class="display-1" style="position: absolute; margin-left: 400px; margin-top: -150px;">ALL USERS</h1>
+    <table class="table table-dark table-hover" style="width: 800px; margin-left:300px; margin-top:200px;">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Created at</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in users %}
+            <tr>
+                <th scope="row">{{row['id']}}</th>
+                <td>{{row['First_Name']}} {{row['Last_Name']}}</td>
+                <td>{{row['Email']}}</td>
+                <td>{{row['Created_at']}}</td>
+                <td><a href="/show/{{row['id']}}">SHOW</a><a href="/edit/{{row['id']}}">EDIT</a>
+                    <a href="/delete/{{row['id']}}">DELETE</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    
+    </table>
+    <div>
+    <a href='/create'><button type="button" class="btn btn-primary">Add new users</button></a>
+    </div>
+    </body>
+</html>
